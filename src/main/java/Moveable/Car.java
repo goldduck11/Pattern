@@ -1,10 +1,11 @@
-package Moveabke;
+package Moveable;
 
 public abstract class Car implements Moveable {
     private int x, y;
     private int speed;
     private String color;
     private int fuel;
+
 
     @Override
     public void go_To_The_Point(int x, int y) {

@@ -1,6 +1,6 @@
-package Moveabke;
+package Moveable;
 
-public class Zhiguli {
+public class Zhiguli extends Car {
     private int weight;
 
     public int getWeight() {

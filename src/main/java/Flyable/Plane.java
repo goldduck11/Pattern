@@ -1,41 +1,37 @@
 package Flyable;
+import Moveable.*;
 
-import java.io.File;
-
-public abstract class Plane implements Flyable {
-    private int x, y, z;
-    private int speed;
-    private int fuel;
+public abstract class Plane extends Car implements Flyable {
+    private int z;
 
     @Override
     public void increase_height(int height) {
-        this.y += height;
+        this.z+=height;
     }
 
     @Override
     public void fly_to_the_point(int x, int y, int z) {
-        this.x = x;
-        this.y = y;
+        super.go_To_The_Point(x,y);
         this.z = z;
 
     }
 
 
     public int getSpeed() {
-        return speed;
+        return super.getSpeed();
     }
 
 
     public void setSpeed(int speed) {
-        this.speed = speed;
+        super.setSpeed(speed);
     }
 
     public int getFuel() {
-        return fuel;
+        return super.getFuel();
     }
 
     public void setFuel(int fuel) {
-        this.fuel = fuel;
+        super.setFuel(fuel);
     }
 
 }
